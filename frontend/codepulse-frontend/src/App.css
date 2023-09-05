@@ -1,0 +1,42 @@
+
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+.landinginputs{
+    height: 34px;
+    width: 100%;
+    margin-top: 4px;
+    padding-left: 12px;
+    background-color: transparent;
+    border-radius: 4px;
+    font-size: 16px;
+    border: 1px solid #0B6947;
+}
+
+.landingInputDiv{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.landingBtn{
+    background-image:  linear-gradient(to right, #03432b, #0B6947);
+    color: #fff;
+    margin: auto;
+    border: none;
+    width: 150px;
+    height: 45px;
+    font-size: 16px;
+    transition: 0.5s;
+    border-radius: 2px;
+    display: block;
+    cursor: pointer;
+}
+.landingBtn:hover{
+    background-image:  linear-gradient(to right, #0B6947, #03432b);
+    transition: 0.5s;
+    width: 155px;
+    height: 48px;
+}

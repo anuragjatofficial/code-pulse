@@ -35,6 +35,9 @@ public class UserServiceImpl implements UserService {
 			if (user2 == null)
 				return userRepository.save(user);
 			else
+				user2.setInterviewType(user.getInterviewType());
+				user2.getQustionsAndAnswers().clear();
+			    userRepository.save(user2);
 				return user2;
 		} else
 			throw new InvalidDataException("can't pass null value");

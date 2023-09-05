@@ -85,7 +85,7 @@ public class ChatgptSerivceImpl implements ChatgptService {
 			request+= request_temp.replaceAll("\"", "");
 		}
 		
-		request+="`read all the question and answers and provide feedback basis on communication skills, technical skils, Conceptual Understanding and interview skills on a scale of 100 for example response should look like 'Communication Skills: 60/100 technical skills: 60/100 Interview Skills: 60/100, Conceptual Understanding: 60/100 in key value pair and no need to provide feedback for each question '  ";
+		request+="`Now Imagine the above question and answer were given by me for an interview based on the above questions and answers give me the proper feedback of the interview. The Feedback should follow the following structure {communication skill: give rating out of 10 (if no questions for this then give zero), Technical skill : give rating out of 10 (if no questions for this then give zero),Coding skill : give rating out of 10 (if no questions for this then give zero),Conceptual Understanding : give rating out of 10 (if no questions for this then give zero)}Note (very important)- Don't give any feedback explanation just give marks out of 10. Also don't write anything in your feedback apart from the structure given`";
 		
 		org.springframework.http.HttpHeaders headers = new org.springframework.http.HttpHeaders();
 		

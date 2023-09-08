@@ -16,7 +16,7 @@ const handleStart =()=>{
     username: username
   }
   
-  axios.post("https://codepulse.up.railway.app/users",obj)
+  axios.post("http://backend.codepulse.me:8888/users",obj)
   .then((res)=>{
     console.log(res.data)
   })

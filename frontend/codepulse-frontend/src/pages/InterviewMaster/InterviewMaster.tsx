@@ -43,7 +43,7 @@ const InterviewMaster = () => {
     try {
       setLoading(true);
       const data = await axios.get(
-        `https://codepulse.up.railway.app/start?username=${username}`
+        `http://backend.codepulse.me:8888/start?username=${username}`
       );
       setLoading(false);
 
@@ -63,7 +63,7 @@ const InterviewMaster = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      url: `https://codepulse.up.railway.app/users/${username}/chat`,
+      url: `http://backend.codepulse.me:8888/users/${username}/chat`,
       data: JSON.stringify(newObj),
     })
       .then((res) => {

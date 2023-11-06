@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function LandingPage() {
 const [username, setUsername] = useState("")
 const [role, setRole] = useState("")
-
+const baseURL = process.env.REACT_APP_BASE_API_URL;
 
 
 const handleStart =()=>{
@@ -16,13 +16,14 @@ const handleStart =()=>{
     username: username
   }
   
-  axios.post("http://backend.codepulse.me:8888/users",obj)
-  .then((res)=>{
-    console.log(res.data)
-  })
-  .catch((err)=>{
-    console.log(err)
-  })
+  axios
+    .post(`${baseURL}/users`, obj)
+    .then((res) => {
+      console.log(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
   localStorage.setItem("username", username);
 }
 

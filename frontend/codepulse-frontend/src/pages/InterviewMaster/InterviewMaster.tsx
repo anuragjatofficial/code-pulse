@@ -39,11 +39,13 @@ const InterviewMaster = () => {
 
   const username = localStorage.getItem("username");
 
+  const baseURL = process.env.REACT_APP_BASE_API_URL;
+
   const getQuestion = async () => {
     try {
       setLoading(true);
       const data = await axios.get(
-        `http://backend.codepulse.me:8888/start?username=${username}`
+        `${baseURL}/start?username=${username}`
       );
       setLoading(false);
 
@@ -63,7 +65,7 @@ const InterviewMaster = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      url: `http://backend.codepulse.me:8888/users/${username}/chat`,
+      url: `${baseURL}/users/${username}/chat`,
       data: JSON.stringify(newObj),
     })
       .then((res) => {

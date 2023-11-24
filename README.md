@@ -7,7 +7,7 @@
 
 Project: Make a Full-Stack website with provided reference website.
 
-Deployed-Application: https://codepulseweb.netlify.app/
+Deployed-Application: https://code-pulse-ai.vercel.app
 
 HOW TO GO THROUGH THE PROJECT -
 - First, Enter UserName.
